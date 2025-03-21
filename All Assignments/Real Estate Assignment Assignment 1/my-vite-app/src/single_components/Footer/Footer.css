@@ -1,0 +1,145 @@
+.whole-footer {
+    background: linear-gradient(135deg, #004d40, #1AA090);
+    /* Smooth Gradient */
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 10%;
+    gap: 30px;
+    text-align: left;
+    border-top-left-radius: 50px;
+    /* Curved Edges */
+    border-top-right-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Glowing Effect */
+.whole-footer::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    top: -50px;
+    left: -50px;
+    border-radius: 50%;
+    filter: blur(70px);
+    z-index: 0;
+}
+
+.whole-footer::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    bottom: -30px;
+    right: -30px;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 0;
+}
+
+.whole-footer>div {
+    position: relative;
+    z-index: 1;
+}
+
+/* Rentiz Logo & Text */
+.rentiz {
+    max-width: 320px;
+}
+
+.rentiz img {
+    width: 160px;
+    margin-bottom: 12px;
+}
+
+.rentiz p {
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* Social Media Icons */
+.rentiz ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.rentiz ul li img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, filter 0.3s;
+    filter: brightness(0.8);
+}
+
+
+.rentiz ul li img:hover {
+    transform: scale(1.2);
+    filter: brightness(1);
+}
+
+/* Footer Sections */
+.project,
+.company,
+.movemennt,
+.help {
+    min-width: 180px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 15px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .whole-footer {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .rentiz,
+    .project,
+    .company,
+    .movemennt,
+    .help {
+        text-align: center;
+    }
+
+    .rentiz ul {
+        justify-content: center;
+    }
+
+    ul li {
+        transition: color 0.3s ease-in-out, transform 0.2s;
+    }
+
+    ul li:hover {
+        transform: translateX(0);
+    }
+}

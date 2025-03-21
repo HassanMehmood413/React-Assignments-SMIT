@@ -1,0 +1,242 @@
+body {
+  background-color: #121b25;
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  color: white;
+
+  /* overflow-x: hidden; */
+  /* Prevents horizontal scrolling */
+  padding: 0;
+}
+
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  color: white;
+  background-color: #121b25;
+}
+
+
+
+.navbar {
+  position: fixed;
+  padding: 10px 0px;
+  display: flex;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--jet);
+  border-radius: 12px 12px 0 0;
+  box-shadow: var(--shadow-2);
+  z-index: 5;
+  justify-content: space-around;
+}
+
+.navbar-list {
+  display: flex;
+  /* position: fixed; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin: 0 0%;
+  text-decoration: none;
+}
+
+.navbar .navbar-list li:first-child {
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  text-decoration-color: #1AA090;
+}
+
+.navbar .navbar-list li {
+  margin: 0px 27px;
+  list-style: none;
+}
+
+.navbar .navbar-list li a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar.buttons {
+  display: flex;
+  gap: 10px;
+  margin: 0px 23px;
+  font-size: 16px;
+  /* Adds spacing between buttons */
+}
+
+.login-btn {
+  background: transparent;
+  /* border: 2px solid #1AA090; */
+  color: white;
+  padding: 0px 18px;
+  /* border: 2px solid #1AA090; */
+  margin: 2px 22px;
+  border: none;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.signup-btn {
+  background: none;
+  border: none;
+  color: white;
+  margin: 2px 22px;
+  padding: 0px 18px;
+  /* border: 2px solid #1AA090; */
+  font-size: 11px;
+  cursor: pointer;
+  background: #1AA090;
+  /* border-radius: 5px; */
+  transition: all 0.3s ease-in-out;
+}
+
+.login-btn h3 {
+  font-size: 12px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.signup-btn h3 {
+  font-size: 12px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* ----------------
+billBoard
+---------------- */
+
+
+.home-whole {
+  height: 925px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-whole .text-area-section {
+  width: 34%
+}
+
+
+.search-container {
+  position: absolute;
+  padding: 5px 8px;
+  width: 48%;
+  margin: 27px 2px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px
+}
+
+.search-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-button {
+  background: #1AA090;
+  color: white;
+  padding: 32px 46px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.search-item label {
+  font-size: 12px;
+  color: gray;
+  display: block;
+}
+
+.search-item select {
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  width: 150px;
+}
+
+.search-button:hover {
+  background: #128774;
+}
+
+
+.text-area-section .textarea-1 {
+  color: white;
+  font-size: 26px;
+  line-height: 83px;
+  text-align: left;
+}
+
+.text-area-section .textarea-2 {
+  color: white;
+  text-align: left;
+  width: 100%;
+  font-size: 12px;
+}
+
+.features-logo {
+  width: 83%;
+  margin: 0 auto;
+}
+
+.features-logo .heading-1 {
+  padding-bottom: 27px;
+  display: flex;
+  color: white;
+  margin-top: 0px;
+}
+
+.features-logo .features-logos {
+  display: flex;
+  gap: 97px;
+}
+
+.features-logo ul .logos {
+  list-style: none;
+}
+
+.features-logos .logos img {
+  filter: grayscale(100%);
+  /* Make logos black and white initially */
+  transition: filter 0.3s ease-in-out;
+}
+
+.home-image .project-img img {
+  width: 121%;
+  max-width: 653px;
+  height: auto;
+}
+
+.features-logos .logos:hover img {
+  filter: invert(34%) sepia(78%) saturate(500%) hue-rotate(130deg);
+  /* Change to a greenish color */
+}
+
+.four-blocks {
+  height: 362px;
+  display: flex;
+  position: absolute;
+  top: 79%;
+  left: auto;
+  right: 0;
+}

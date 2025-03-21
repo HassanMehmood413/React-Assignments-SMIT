@@ -1,0 +1,92 @@
+.chooseus {
+    background-image: url(/src/assets/Images/section3-01.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    margin-top: 9%;
+    background-size: 15%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* flex-direction: row; */
+    position: relative;
+    z-index: 1;
+}
+
+.chooseus .quote {
+    font-size: 25px;
+    width: 60%;
+    justify-content: left;
+    display: flex;
+    text-align: left;
+    line-height: 47px;
+}
+
+.chooseus .quotes {
+    float: left;
+    position: relative;
+    right: 28%;
+}
+
+
+
+.choose-card ul {
+    list-style: none;
+    display: flex;
+    gap: 180px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 38px 12px;
+}
+
+.choose-card ul li {
+    width: 211px;
+    height: 201px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid rgba(26, 160, 144, 0.5);
+    /* Semi-transparent border */
+    background: rgba(255, 255, 255, 0.2);
+    /* Transparent white */
+    backdrop-filter: blur(10px) saturate(180%);
+    /* Crystal effect */
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    /* For Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Soft shadow */
+    object-fit: cover;
+}
+
+
+
+
+.chooseus .info {
+    display: flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.chooseus .text {
+    text-align: left;
+    /* Aligns text to the left */
+}
+
+.chooseus .image img {
+    width: 100px;
+    /* Adjust image size */
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Optional: Makes it circular */
+}

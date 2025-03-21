@@ -1,0 +1,89 @@
+.help-container {
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 58px;
+    width: 87%;
+    padding-top: 149px;
+    height: 100vh;
+}
+
+.help-container .images {
+    display: flex;
+    gap: 22px;
+    height: 509px;
+    width: 100%;
+}
+
+.help-container .content-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.help-container .content-info h1 {
+    font-size: 45px;
+    width: 70%;
+    line-height: 62px;
+}
+
+.help-container .content-info p {
+    font-size: 15px;
+    width: 100%;
+    text-align: left;
+    line-height: 24px;
+}
+
+.help-container .content-info .btn {
+    color: white;
+    width: 31%;
+    padding: 17px 14px;
+    border-radius: 34px;
+    background: #1AA090;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(26, 160, 144, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Hover effect */
+.help-container .content-info .btn:hover {
+    background: #128774;
+    box-shadow: 0 6px 14px rgba(18, 135, 116, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Active (click) effect */
+.help-container .content-info .btn:active {
+    background: #0f6b5f;
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(15, 107, 95, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .help-container .content-info .btn {
+        width: 50%;
+        font-size: 16px;
+        padding: 14px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .help-container .content-info .btn {
+        width: 80%;
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+}

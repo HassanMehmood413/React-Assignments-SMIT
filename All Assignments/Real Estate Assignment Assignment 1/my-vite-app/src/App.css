@@ -240,3 +240,22 @@ billBoard
   left: auto;
   right: 0;
 }
+
+
+
+
+/* # ---------------------
+Contact us
+# --------------------- */
+
+
+.contact-container {
+  height: 100vh;
+  padding-top: 7%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

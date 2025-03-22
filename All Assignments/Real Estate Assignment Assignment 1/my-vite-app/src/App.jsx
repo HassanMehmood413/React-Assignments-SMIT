@@ -12,11 +12,7 @@ export default function App() {
   return (
     <>
       <Routing/>
-      <PopularResidance/>
-      <ChooseUs/>
-      <Needhelp/>
-      <Abovefooter/>
-      <Footer/>
+
     </>
     )
 }

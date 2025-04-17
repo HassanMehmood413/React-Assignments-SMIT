@@ -6,7 +6,8 @@ import Resume from "../pages/resume/Resume";
 import Blog from "../pages/blog/Blog";
 import Sidebar from "../components/sidebar/Sidebar";
 import Navbar from "../components/navbar/Navbar";
-
+import Products from "../pages/products/Products";
+import Github from "../pages/github/Github";
 
 function Routing() {
 
@@ -17,12 +18,12 @@ function Routing() {
 
 
       <main>
-        <Sidebar />
+        {/* <Sidebar /> */}
 
         <BrowserRouter>
 
           <div className="main-content">
-            <Navbar />
+            {/* <Navbar />; */}
 
             <Routes>
               <Route path="/" element={<About />} />
@@ -30,6 +31,8 @@ function Routing() {
               <Route path="/resume" element={<Resume />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/github" element={<Github />} />
               <Route path="*" element={<h1>404 Not Found</h1>} />
             </Routes>
 

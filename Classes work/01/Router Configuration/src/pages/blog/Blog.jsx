@@ -1,40 +1,25 @@
 import React from 'react'
 import BlogCard from '../../components/cards/BlogCard'
+import { useDispatch,useSelector } from 'react-redux'
+import { addblog,removeblog } from '../../store/slices/blog.slice'
+import { blogData } from '../../constants/blog.constant'
 
 
 export default function Blog() {
-  const blogData = [
-    {
-      title: 'Design conferences in 2022',
-      description: 'Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.',
-      image: require('../../assets/images/blog-1.jpg')
-    },
-    {
-      title: 'Best fonts every designer',
-      description: 'Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.',
-      image: require('../../assets/images/blog-2.jpg')
-    },
-    {
-      title: 'Design digest #80',
-      description: 'Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.',
-      image: require('../../assets/images/blog-3.jpg')
-    },
-    {
-      title: 'UI interactions of the week',
-      description: 'Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.',
-      image: require('../../assets/images/blog-4.jpg')
-    },
-    {
-      title: 'The forgotten art of spacing',
-      description: 'Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      image: require('../../assets/images/blog-5.jpg')
-    },
-    {
-      title:'Design digest #79',
-      description:'Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.',
-      image:require('../../assets/images/blog-6.jpg')
-    }
-  ]
+  const dispatch = useDispatch()
+  const blog = useSelector((store)=>store.blogSlice.blog)
+  console.log(blog)
+
+  const handleAddblog = (blog) => {
+    dispatch(addblog(blog))
+  }
+  const handleRemoveblog = (blog) => {
+    dispatch(removeblog(blog))
+  }
+
+
+  
+
   return (
     <article className="blog active" data-page="blog">
 
@@ -48,8 +33,9 @@ export default function Blog() {
 
           {
             [
-              blogData.map((item,index)=>{
-                return <BlogCard key={index} title={item.title} description={item.description} image={item.image} />
+              blogData.map((blog)=>{
+                console.log(blog)
+                return <BlogCard key={blog.id} title={blog.title} description={blog.description} image={blog.image} />
               })
             ]
           }

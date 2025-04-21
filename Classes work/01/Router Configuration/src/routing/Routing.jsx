@@ -8,6 +8,7 @@ import Sidebar from "../components/sidebar/Sidebar";
 import Navbar from "../components/navbar/Navbar";
 import Products from "../pages/products/Products";
 import Github from "../pages/github/Github";
+import Counter from "../counter/Counter";
 
 function Routing() {
 
@@ -33,6 +34,8 @@ function Routing() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/products" element={<Products />} />
               <Route path="/github" element={<Github />} />
+              <Route path="/github" element={<Github />} />
+              <Route path="/counter" element={<Counter />} />
               <Route path="*" element={<h1>404 Not Found</h1>} />
             </Routes>
 

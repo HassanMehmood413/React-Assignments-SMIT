@@ -3,8 +3,39 @@ import ServiceCard from '../../components/cards/ServiceCard'
 import Logo from '../../components/logo/Logo'
 import TestimonialsCard from '../../components/cards/TestimonialsCard'
 import { services, clientLogos, testimonials } from '../../constants/about.constant'
+import { useDispatch, useSelector } from 'react-redux'
+import { addService, addTestiomonial, addClientLogo, removeService, removeTestiomonial, removeClientLogo } from '../../store/slices/about.slice'
+
+
+
+
 export default function About() {
- 
+  const { testimonials, services, clientLogos } = useSelector((store) => store.aboutSlice);
+  console.log(services)
+  const dispatch = useDispatch()
+
+
+  // For future use
+  const handleAddService = (service) => {
+    dispatch(addService(service))
+  }
+  const handleRemoveService = (service) => {
+    dispatch(removeService(service))
+  }
+  const handleAddTestimonial = (testimonial) => {
+    dispatch(addTestiomonial(testimonial))
+  }
+  const handleRemoveTestimonial = (testimonial) => {
+    dispatch(removeTestiomonial(testimonial))
+  }
+  const handleAddClientLogo = (logo) => {
+    dispatch(addClientLogo(logo))
+  }
+  const handleRemoveClientLogo = (logo) => {
+    dispatch(removeClientLogo(logo))
+  }
+
+
   return (
     <article className="about  active" data-page="about">
 
@@ -35,8 +66,9 @@ export default function About() {
 
         <ul className="service-list">
           {
-            services.map((item, index) => {
-              return <ServiceCard key={index} image={item.image} title={item.title} description={item.description} />
+            services.map((service) => {
+              console.log(service)
+              return <ServiceCard key={service.id} image={service.image} title={service.title} description={service.description} />
             })
           }
         </ul>
@@ -52,8 +84,8 @@ export default function About() {
 
         <ul className="testimonials-list has-scrollbar">
           {
-            testimonials.map((testimonial, index) => {
-              return <TestimonialsCard key={index} name={testimonial.name} avatar={testimonial.avatar} review={testimonial.review} />
+            testimonials.map((testimonial) => {
+              return <TestimonialsCard key={testimonial.id} name={testimonial.name} avatar={testimonial.avatar} review={testimonial.review} />
             }
             )
           }
@@ -72,8 +104,8 @@ export default function About() {
 
         <ul className="clients-list has-scrollbar">
           {
-            clientLogos.map((logo, index) => {
-              return <Logo key={index} logo={logo} />
+            clientLogos.map((logo) => {
+              return <Logo key={logo.id} logo={logo.logo} />
             }
             )
           }

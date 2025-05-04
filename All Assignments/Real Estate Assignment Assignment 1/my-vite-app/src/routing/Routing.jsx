@@ -1,10 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home from '../pages/home/Home'
-import Navbar from '../components/navbar/Navbar';
-import App from '../App';
 import Contact from '../pages/contactUs/Contact';
 import Footer from '../single_components/Footer/Footer';
+import CreatePosts from '../pages/createposts/CreatePost'; 
+import Posts from '../pages/posts/Posts';
 
 export default function Routing() {
     return (
@@ -13,16 +13,18 @@ export default function Routing() {
 
                 <div className="main-content">
                     <div className="nav">
-                        <Navbar />
+                        {/* <Navbar /> */}
                     </div>
 
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path='/contactus' element={<Contact />} />
+                        <Route path="/createpost" element={<CreatePosts />} />
+                        <Route path='/posts' element={<Posts />} />
                     </Routes>
 
                     <div className="footer">
-                        <Footer />
+                        {/* <Footer /> */}
                     </div>
                 </div>
 

@@ -1,20 +1,12 @@
 import React from 'react'
 import PortfolioCard from '../../components/cards/PortfolioCard'
+import { useSelector, useDispatch } from 'react-redux'
+import { projectsData } from '../../constants/portfolio.constant'
 
 export default function Services() {
+  const portfoliodata = useSelector((store)=>store.portfolioslice.portfolio)
 
-  const projectsData = [
-    { title: 'Finance', description: 'Web development', image: require('../../assets/images/project-1.jpg') },
-    { title: 'Orizon', description: 'Web development', image: require('../../assets/images/project-2.png') },
-    { title: 'Fundo', description: 'Web design', image: require('../../assets/images/project-3.jpg') },
-    { title: 'Brawlhalla', description: 'Applications', image: require('../../assets/images/project-4.png') },
-    { title: 'DSM.', description: 'Web design', image: require('../../assets/images/project-5.png') },
-    { title: 'MetaSpark', description: 'Web design', image: require('../../assets/images/project-6.png') },
-    { title: 'Summary', description: 'Web development', image: require('../../assets/images/project-7.png') },
-    { title: 'Task Manager', description: 'Applications', image: require('../../assets/images/project-8.jpg') },
-    { title: 'Arrival', description: 'Web development', image: require('../../assets/images/project-9.png') }
-  ]
-
+  
   return (
     <article className="portfolio active" data-page="portfolio">
 
@@ -81,8 +73,8 @@ export default function Services() {
         <ul className="project-list">
           {
             [
-              projectsData.map((item, index) => {
-                return <PortfolioCard key={index} description={item.description} title={item.title} image={item.image} />
+              projectsData.map((portfolio) => {
+                return <PortfolioCard key={portfolio.id} description={portfolio.description} title={portfolio.title} image={portfolio.image} />
               })
             ]
           }

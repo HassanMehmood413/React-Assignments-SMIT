@@ -4,8 +4,6 @@ import { db } from "../../config/firebase"
 
 
 
-
-
 export const createPost = createAsyncThunk(
     "posts/createpost",
     async (post) => {

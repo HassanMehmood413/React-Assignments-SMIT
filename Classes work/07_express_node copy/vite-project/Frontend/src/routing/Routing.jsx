@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CreatePosts from '../pages/createpost/CURD'; 
+import CreatePosts from '../pages/createpost/CURD';
 import Dashboard from '../pages/dashboard/Dashboard';
 import SignupForm from "../pages/signup/SignupForm.jsx";
 import LoginForm from "../pages/login/LoginForm.jsx";
 import ProtectedRoute from "../components/ProtectedRoutes/Protectedroutes.jsx"; // Ensure correct import
+import CRUD from '../pages/CRUD_Test/CRUD.jsx';
 
 export default function Routing() {
   return (
@@ -30,6 +31,10 @@ export default function Routing() {
               <ProtectedRoute>
                 <CreatePosts />
               </ProtectedRoute>
+            } />
+
+            <Route path="/showproducts" element={
+              <CRUD />
             } />
           </Routes>
 

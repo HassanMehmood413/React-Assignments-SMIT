@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { useDispatch } from "react-redux";
-import { createPost, updateposts, deletepost, getposts } from "../../store/Slices/post.slice";
+// import { createPost, updateposts, deletepost, getposts } from "../../store/Slices/post.slice";
 import "./modal.css";
 import { useNavigate } from 'react-router';
 

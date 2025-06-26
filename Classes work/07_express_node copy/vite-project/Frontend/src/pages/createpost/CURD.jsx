@@ -1,4 +1,4 @@
-import postslice, { createPost, updateposts, deletepost, getposts } from "../../store/Slices/post.slice";
+// import postslice, { createPost, updateposts, deletepost, getposts } from "../../store/Slices/post.slice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import React, { useEffect, useState } from "react";

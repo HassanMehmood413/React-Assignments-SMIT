@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
+require("dotenv").config(); // Load .env
 
 const connectDB = async () => {
   try {
-    const Database_Url = "mongodb+srv://smit:smit@cluster0.0c2y.mongodb.net/test?retryWrites=true&w=majority";
+    const Database_Url = process.env.MONGO_URI;
 
     await mongoose.connect(Database_Url, {
       useNewUrlParser: true,

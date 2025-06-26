@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import "./dashboard.css"
 import { useNavigate } from "react-router-dom"
-import { getposts } from "../../store/Slices/post.slice"
+import { getProducts } from "../../store/Slices/product.slice"
 import { useDispatch } from "react-redux"
 import Modal from "../../components/modal/Modal"
 
@@ -33,7 +33,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await dispatch(getposts())
+      const response = await dispatch(getProducts())
       const data = response.payload
       setdata(data)
       console.log(data)

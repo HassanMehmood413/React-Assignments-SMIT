@@ -2,9 +2,6 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CreatePosts from '../pages/createpost/CURD';
 import Dashboard from '../pages/dashboard/Dashboard';
-import SignupForm from "../pages/signup/SignupForm.jsx";
-import LoginForm from "../pages/login/LoginForm.jsx";
-import ProtectedRoute from "../components/ProtectedRoutes/Protectedroutes.jsx"; // Ensure correct import
 import CRUD from '../pages/CRUD_Test/CRUD.jsx';
 
 export default function Routing() {
@@ -17,20 +14,20 @@ export default function Routing() {
           </div>
 
           <Routes>
-            <Route path='/signup' element={<SignupForm />} />
-            <Route path='/login' element={<LoginForm />} />
+            {/* <Route path='/signup' element={<SignupForm />} />
+            <Route path='/login' element={<LoginForm />} /> */}
 
             {/* Protected Routes */}
             <Route path='/' element={
-              <ProtectedRoute>
+              // <ProtectedRoute>
                 <Dashboard />
-              </ProtectedRoute>
+              // </ProtectedRoute>
             } />
 
             <Route path="/createpost" element={
-              <ProtectedRoute>
+              // <ProtectedRoute>
                 <CreatePosts />
-              </ProtectedRoute>
+              // </ProtectedRoute>
             } />
 
             <Route path="/showproducts" element={

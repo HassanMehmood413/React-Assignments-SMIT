@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CreatePosts from '../pages/createpost/CURD';
 import Dashboard from '../pages/dashboard/Dashboard';
 import CRUD from '../pages/CRUD_Test/CRUD.jsx';
+import Uploads from '../pages/uploads/Uploads.jsx';
 
 export default function Routing() {
   return (
@@ -20,15 +21,23 @@ export default function Routing() {
             {/* Protected Routes */}
             <Route path='/' element={
               // <ProtectedRoute>
-                <Dashboard />
+              <Dashboard />
               // </ProtectedRoute>
             } />
 
             <Route path="/createpost" element={
               // <ProtectedRoute>
-                <CreatePosts />
+              <CreatePosts />
               // </ProtectedRoute>
             } />
+
+
+            <Route path="/uploads" element={
+              // <ProtectedRoute>
+              <Uploads />
+              // </ProtectedRoute>
+            } />
+
 
             <Route path="/showproducts" element={
               <CRUD />

@@ -1,9 +1,8 @@
-const express = require("express")
-const router = express.Router()
-const Product = require("../schemas/Products")
+
+const Product = require("../models/Products")
 
 
-router.post("/create/products", async (req, res) => {
+const createProduct = async (req, res) => {
   try {
     const { name, price, details } = req.body;
     if (!name || !price || !details) {
@@ -30,9 +29,9 @@ router.post("/create/products", async (req, res) => {
       data: err
     })
   }
-})
+}
 
-router.get("/products", async (req, res) => {
+const getProducts =  async (req, res) => {
   try {
     const products = await Product.find()
     res.json({
@@ -49,9 +48,11 @@ router.get("/products", async (req, res) => {
     })
 
   }
-})
+}
 
-router.put("/update/products/:id", async (req, res) => {
+
+
+const updateProduct = async (req, res) => {
   const { id } = req.params;
   const { name, price, details } = req.body;
   try {
@@ -91,9 +92,9 @@ router.put("/update/products/:id", async (req, res) => {
       data: err
     })
   }
-})
+}
 
-router.delete("/delete/products/:id", async (req, res) => {
+const deleteProducts = async (req, res) => {
   const { id } = req.params;
   try {
     const product = await Product.findById(id)
@@ -120,7 +121,14 @@ router.delete("/delete/products/:id", async (req, res) => {
       data: err
     })
   } 
-})
+}
+
+module.exports = {
+  createProduct,
+  getProducts,
+  updateProduct,
+  deleteProducts,
+}
 
 
 
@@ -248,4 +256,3 @@ router.delete("/delete/products/:id", async (req, res) => {
 // })
 
 
-module.exports = router

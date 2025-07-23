@@ -5,13 +5,13 @@ import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.REACT_APP_FIREBASE_APP_ID,
-    measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyDJk2a5vmN9fLJtvLps7j57bk4a3kbyQqo",
+  authDomain: "reactfirstassignment-7311f.firebaseapp.com",
+  projectId: "reactfirstassignment-7311f",
+  storageBucket: "reactfirstassignment-7311f.firebasestorage.app",
+  messagingSenderId: "290368893855",
+  appId: "1:290368893855:web:eb3b9918cb01befbfe03aa",
+  measurementId: "G-LZY7NSXHK6"
 };
 
 

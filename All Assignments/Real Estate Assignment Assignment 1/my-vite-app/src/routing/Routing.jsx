@@ -5,6 +5,7 @@ import Contact from '../pages/contactUs/Contact';
 import Footer from '../single_components/Footer/Footer';
 import CreatePosts from '../pages/createposts/CreatePost'; 
 import Posts from '../pages/posts/Posts';
+import Navbar from "../components/navbar/Navbar";
 
 export default function Routing() {
     return (
@@ -13,7 +14,7 @@ export default function Routing() {
 
                 <div className="main-content">
                     <div className="nav">
-                        {/* <Navbar /> */}
+                        <Navbar />
                     </div>
 
                     <Routes>
@@ -24,7 +25,7 @@ export default function Routing() {
                     </Routes>
 
                     <div className="footer">
-                        {/* <Footer /> */}
+                        <Footer />
                     </div>
                 </div>
 

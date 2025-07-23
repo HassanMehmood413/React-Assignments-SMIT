@@ -5,6 +5,7 @@ const connectDB = require("./config/database");
 const productRoutes = require("./routes/Productroutes");
 const uploadRoutes = require("./routes/Uploadrouter")
 const applyMiddleware = require("./MiddleWares/authmiddleware"); 
+const authRouter = require("./routes/Authroute")
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -16,6 +17,7 @@ applyMiddleware(app);
 app.use("/", express.static("./uploads"));
 app.use("/api", productRoutes);
 app.use('/',uploadRoutes)
+app.use('/auth',authRouter)
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
